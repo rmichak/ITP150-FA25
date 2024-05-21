@@ -1,5 +1,4 @@
-**Name:**
-**ID:**
+**Name, ID:**
 
 ### Create a Python script that incorporates the following tasks:
 

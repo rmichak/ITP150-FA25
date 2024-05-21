@@ -1,6 +1,5 @@
 ### Student Info:
-**Name:**
-**Student ID:**
+**Name, ID:**
 
 
 ### Problem 1: Comment Practice

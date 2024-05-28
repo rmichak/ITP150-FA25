@@ -1,4 +1,4 @@
-### Python Tutorial: Variables & Data Types
+### Module 2: Variables & Data Types
 
 #### 1. Variables & Data Types
 

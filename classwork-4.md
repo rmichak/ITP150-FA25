@@ -1,4 +1,4 @@
-## Module 6: Decision Control Structures
+## Module 4: Decision Control Structures
 
 ### Table of Contents
 1. If-Then Control Structures

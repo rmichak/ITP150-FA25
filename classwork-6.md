@@ -1,4 +1,4 @@
-### Module 7: Lists
+### Module 6: Lists
 
 ### Objectives
 1. Understand list basics.

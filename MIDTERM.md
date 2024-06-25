@@ -149,12 +149,12 @@ Result: 10
 ### Bonus Problem: Matrix Transpose (10 points)
 
 ### Problem:
-Write a Python program to evaluate a given mathematical expression provided as a string. The program should handle addition, subtraction, multiplication, and division.
+Write a Python program to find the transpose of a matrix. The matrix is given as a list of lists.
 
 ### Rubric:
-- Correctly parsing and evaluating the expression (4 points)
-- Proper use of arithmetic and logical operators (3 points)
-- Correct handling of input and output (3 points)
+- Correctly transposing the matrix (4 points)
+- Proper use of for loops (3 points)
+- Correct input and output handling (3 points)
 
 #### Sample Input:
 ```

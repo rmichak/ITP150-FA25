@@ -1,4 +1,6 @@
-### Module 7: Functions
+### Module 7
+
+### Part -1 : Functions
 
 This tutorial will cover the essentials of Python functions, based on the provided slides. Functions are a fundamental concept in programming, enabling code modularity, reusability, and better organization.
 
@@ -161,3 +163,96 @@ print(compute_area('circle', 5))  # Output: 78.5
 print(compute_area('rectangle', 4, 6))  # Output: 24
 print(compute_area('square', 3))  # Output: 9
 ```
+
+### Part - 2: Exceptions
+
+### Module Objectives
+By the end of this tutorial, you should be able to:
+1. Define exceptions and understand their use.
+2. Differentiate between logic errors, semantic errors, and runtime errors.
+3. Describe various types of exceptions and their use cases.
+4. Implement try-except blocks to handle exceptions.
+5. Understand the best practices for exception handling.
+
+### 1. Defining Exceptions
+
+#### Errors in Code
+- **Logic Errors**: These are mistakes in the program’s logic that produce incorrect results but do not crash the program.
+- **Semantic Errors**: These errors are detected by the compiler and prevent the code from running.
+- **Runtime Errors**: These errors occur during the execution of the program, causing it to stop.
+- **Exception**: An unexpected event that occurs during the program’s execution, preventing the program from continuing.
+
+#### Exception Objects
+Exceptions in Python are objects that contain information about the error. They can be handled using try-except blocks.
+
+### 2. Types of Exceptions
+There are many built-in exceptions in Python. Here are some common ones:
+
+| Exception           | Situation                                              | Example                          |
+|---------------------|--------------------------------------------------------|----------------------------------|
+| IndexError          | An index is outside an appropriate range               | `numbers = [1, 2, 3]; print(numbers[3])` |
+| NotImplementedError | A function or method was not implemented               | `raise NotImplementedError("This function is not implemented yet.")` |
+| RuntimeError        | An error that does not fit any other exception type    | `raise RuntimeError("Runtime error occurred")` |
+| TypeError           | A function receives an argument of incorrect type      | `print(len(42))`                 |
+| ValueError          | A function receives an argument of incorrect value     | `int("abc")`                     |
+| ZeroDivisionError   | Division by zero                                       | `x = 1 / 0`                      |
+
+### 3. Handling Exceptions
+
+#### Try-Except Block
+The basic syntax for handling exceptions in Python is the try-except block:
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError:
+    # Code that runs if the exception occurs
+    print("You cannot divide by zero!")
+```
+
+#### Catching Multiple Exceptions
+You can handle multiple exceptions by specifying multiple except blocks:
+
+```python
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+```
+
+#### General Exception Handling
+You can catch all exceptions using a general except block, but this is not recommended for all cases as it can make debugging difficult:
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except Exception as e:
+    # Code that runs if any exception occurs
+    print(f"An error occurred: {e}")
+```
+
+### 4. Raising Exceptions
+You can raise exceptions in your code using the `raise` keyword:
+
+```python
+def check_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    print(f"Your age is {age}")
+
+try:
+    check_age(-1)
+except ValueError as e:
+    print(e)
+```
+
+### 5. Best Practices for Exception Handling
+- Use specific exceptions instead of a general except block to make the code more readable and easier to debug.
+- Ensure the try block contains only the code that might throw an exception.
+- Avoid using exceptions for normal control flow in your programs.
+- Document the exceptions that your functions can raise.

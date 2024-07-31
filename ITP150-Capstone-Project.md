@@ -1,9 +1,9 @@
 ### ITP150 Capstone Project: Student Management System
 
 #### Project Overview
-Develop a Student Management System that allows for managing student records, including adding, removing, updating, and viewing student information. The system will use various Python concepts, including basic OOP, functions, conditionals, loops, and data structures like strings, lists, and dictionaries.
+Develop a Student Management System to manage student records, including adding, removing, updating, and viewing student information. 
 
-#### Below are the attributes and methods you will need for creating the classes
+#### Below are the attributes and methods you will need to create the classes
 
 1. **Class: Student**
    - Attributes: student_id, name, age, grades (a dictionary of subjects and their corresponding grades)
@@ -43,7 +43,7 @@ Develop a Student Management System that allows for managing student records, in
 
 #### Step 2: Define the StudentManagementSystem Class (30 points)
 1. **Create a StudentManagementSystem Class** (10 points):
-   - This class will manage multiple students using a dictionary where each student's ID is the key and the Student object is the value.
+   - This class will manage multiple students using a dictionary where each student's ID is the key, and the Student object is the value.
 
 2. **Initialize the System** (10 points):
    - Write an `__init__` method to initialize an empty dictionary to store students.

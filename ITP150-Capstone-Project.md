@@ -84,10 +84,10 @@ Develop a Student Management System to manage student records, including adding,
 
 | Category                    | Points |
 |-----------------------------|--------|
-| **Functionality (40 points)** | 4    |
-| **Code Quality (30 points)**  | 3    |
-| **Design (20 points)** |  2     |
-| **Documentation (10 points)** | 1    |
+| **Functionality ** | 4    |
+| **Code Quality **  | 3    |
+| **Design ** |  2     |
+| **Documentation ** | 1    |
 
 
 

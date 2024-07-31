@@ -1,4 +1,4 @@
-### ITP150 Capstone Project: Student Management System
+### ITP150 Capstone Project: Student Management System (Total 150 points)
 
 #### Project Overview
 Develop a Student Management System to manage student records, including adding, removing, updating, and viewing student information. 
@@ -79,6 +79,15 @@ Develop a Student Management System to manage student records, including adding,
 
 5. **Display Student Information** (10 points):
    - Write methods to display the information of a specific student and all students.
+
+### BONUS (10 points)
+
+| Category                    | Points |
+|-----------------------------|--------|
+| **Functionality (40 points)** | 4    |
+| **Code Quality (30 points)**  | 3    |
+| **Design (20 points)** |  2     |
+| **Documentation (10 points)** | 1    |
 
 
 

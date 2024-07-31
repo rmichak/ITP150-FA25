@@ -84,10 +84,10 @@ Develop a Student Management System to manage student records, including adding,
 
 | Category                    | Points |
 |-----------------------------|--------|
-| **Functionality ** | 4    |
-| **Code Quality **  | 3    |
-| **Design ** |  2     |
-| **Documentation ** | 1    |
+| **Functionality** | 4    |
+| **Code Quality**  | 3    |
+| **Design** |  2     |
+| **Documentation** | 1    |
 
 
 

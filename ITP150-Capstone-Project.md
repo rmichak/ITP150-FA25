@@ -30,41 +30,31 @@ Develop a Student Management System to manage student records, including adding,
 
 ### Breakdown of Steps for the Student Management System Project
 
-#### Step 1: Implement the Student Class (30 points)
+#### Step 1: Implement the Student Class (45 points)
 
-1. **Define the Student Class and Initialization Method** (10 points):
+1. **Define the Student Class and Initialization Method** (15 points):
    - Write the `Student` class and the `__init__` method to initialize student attributes.
 
-2. **Add Methods to Manage Grades** (10 points):
+2. **Add Methods to Manage Grades** (15 points):
    - Write methods to add, remove, and update grades.
 
-3. **Calculate Average Grade** (10 points):
+3. **Calculate Average Grade** (15 points):
    - Write a method to calculate the average grade.
 
-#### Step 2: Define the StudentManagementSystem Class (30 points)
-1. **Create a StudentManagementSystem Class** (10 points):
+#### Step 2: Define the StudentManagementSystem Class (45 points)
+1. **Create a StudentManagementSystem Class** (15 points):
    - This class will manage multiple students using a dictionary where each student's ID is the key, and the Student object is the value.
 
-2. **Initialize the System** (10 points):
+2. **Initialize the System** (15 points):
    - Write an `__init__` method to initialize an empty dictionary to store students.
 
-3. **Add Methods to Manage Students** (10 points):
+3. **Add Methods to Manage Students** (15 points):
    - Write methods to add, remove, and update student details (ID, name, age).
    - Write methods to add, remove, and update grades for a specific student.
    - Write a method to get the average grade of a specific student.
    - Write methods to display the information of a specific student and all students.
 
-#### Step 3: Implement the Student Class (30 points)
-1. **Define the Student Class and Initialization Method** (10 points):
-   - Write the `Student` class and the `__init__` method to initialize student attributes.
-
-2. **Add Methods to Manage Grades** (10 points):
-   - Write methods to add, remove, and update grades.
-
-3. **Calculate Average Grade** (10 points):
-   - Write a method to calculate the average grade.
-
-#### Step 4: Implement the StudentManagementSystem Class (50 points)
+#### Step 3: Implement the StudentManagementSystem Class (50 points)
 1. **Define the StudentManagementSystem Class and Initialization Method** (10 points):
    - Write the `StudentManagementSystem` class and the `__init__` method to initialize the student dictionary.
 

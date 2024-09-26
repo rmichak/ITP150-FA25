@@ -1,4 +1,4 @@
-### Classwork - 6 (Lists and Dictionaries)
+### Module - 6 (Lists and Dictionaries)
 
 ---
 

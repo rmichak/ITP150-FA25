@@ -256,3 +256,123 @@ except ValueError as e:
 - Ensure the try block contains only the code that might throw an exception.
 - Avoid using exceptions for normal control flow in your programs.
 - Document the exceptions that your functions can raise.
+
+### Practice Problem: Student Grade Calculator
+
+**Objective:**  
+Write a Python program that takes a student’s name and a dictionary of subject grades as input. The program should calculate and display the average grade. If the grade is missing for any subject, the program should handle this situation using an exception and print a message indicating the missing subject grade.
+
+---
+
+### Tasks:
+
+1. **Create a function:**  
+   Define a function called `calculate_average()` that accepts a dictionary of subject grades.
+
+2. **Handle Exceptions:**  
+   Use a `try-except` block to handle any missing grades or errors (e.g., when grades are not numbers).
+
+3. **Dictionary Input:**  
+   Use a dictionary where the key is the subject name, and the value is the grade. The grades should be numbers.
+
+4. **Calculate Average:**  
+   Calculate the average of the grades by summing them up and dividing by the number of subjects.
+
+5. **Display the Result:**  
+   The program should print the student's name and the average grade. If any grade is missing, print an error message specifying the missing subject.
+
+---
+
+### Code Example:
+
+```python
+# Define the function that calculates the average
+def calculate_average(grades_dict):
+    try:
+        # Sum the values in the dictionary
+        total = sum(grades_dict.values())
+        # Calculate average
+        average = total / len(grades_dict)
+        return average
+    except TypeError:
+        print("Error: Grades should be numbers.")
+    except ZeroDivisionError:
+        print("Error: No grades available to calculate average.")
+
+# Main program to get input and use the function
+student_name = input("Enter the student's name: ")
+
+# Define a dictionary with subject grades
+grades = {
+    "Math": 85,
+    "Science": 90,
+    "English": 78,
+    "History": 92
+}
+
+# Call the function and print the result
+average_grade = calculate_average(grades)
+if average_grade:
+    print(f"{student_name}'s average grade is: {average_grade}")
+```
+
+---
+
+### Explanation:
+
+1. **Function Definition:**  
+   The `calculate_average()` function accepts a dictionary of subject grades and calculates the average of the grades.
+
+2. **Exception Handling:**  
+   The `try-except` block ensures that if there is an issue with the grade values (like missing grades or non-numeric values), the program will print an error message rather than crash.
+
+3. **Dictionary Use:**  
+   The grades for each subject are stored in a dictionary with the subject as the key and the grade as the value.
+
+4. **Input and Output:**  
+   The program takes the student's name as input and prints their average grade. If there is an error, it prints an appropriate message.
+
+---
+
+### Example:
+
+**Input:**
+```
+Enter the student's name: Alice
+```
+
+**Output:**
+```
+Alice's average grade is: 86.25
+```
+
+---
+
+### Modifications for Missing Grades:
+
+In case a grade is missing, modify the dictionary or add an exception to catch missing subjects:
+
+```python
+# Example with a missing subject (for demonstration)
+grades = {
+    "Math": 85,
+    "Science": 90,
+    "English": None  # Simulating a missing grade
+}
+
+# Modify the exception handling in the function:
+def calculate_average(grades_dict):
+    try:
+        total = sum(grade for grade in grades_dict.values() if grade is not None)
+        count = sum(1 for grade in grades_dict.values() if grade is not None)
+        if count == 0:
+            raise ZeroDivisionError
+        average = total / count
+        return average
+    except TypeError:
+        print("Error: Grades should be numbers.")
+    except ZeroDivisionError:
+        print("Error: No grades available to calculate average.")
+```
+
+This version ensures the program works even if some grades are missing.

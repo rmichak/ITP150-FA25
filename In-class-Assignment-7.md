@@ -11,7 +11,7 @@ Define a function `greet_user` that takes a user's name as an argument and print
 #### Problem 3: Void Function
 Create a void function `display_message` that prints "This is a simple message." when called. Call this function.
 
-### Problem 4: Employee Salary Calculator
+#### Problem 4: Employee Salary Calculator
 
 **Objective:**  
 Write a Python program that calculates the average monthly salary for an employee based on their earnings for each month stored in a dictionary. If a month is missing, the program should handle this using an exception and print an error message for the missing month.

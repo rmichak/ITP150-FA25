@@ -229,6 +229,8 @@ After updating the package list, you may want to upgrade all installed packages 
 
 #### **Using Bash Commands:**
 
+- **IMPORTANT: Don't upgrade Cyber Range Kali Linux, this particular "upgrade" example is just to teach you how to upgrade**
+
 - **Command**:
   ```bash
   sudo apt upgrade

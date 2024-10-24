@@ -1,6 +1,6 @@
 ### **Kali Linux: Managing Files and Folders**
 
-This tutorial will guide you through basic file and folder management tasks using **Bash commands** and then show how to accomplish the same tasks using Python’s `subprocess` module. This is particularly useful for beginners who want to understand both command-line operations and automation using Python.
+This tutorial will guide you through basic file and folder management tasks using **Bash commands** and then show how to accomplish the same tasks using Python’s `subprocess` module.
 
 ---
 
@@ -183,7 +183,7 @@ subprocess.run(["rmdir", "newfolder"])
 
 ### **Kali Linux: Package Management**
 
-This tutorial covers basic package management tasks in **Kali Linux** using the **APT (Advanced Package Tool)**. We will first demonstrate these tasks using **Bash commands**, followed by the same tasks using Python's `apt` module. This tutorial will help beginners understand how to install, update, and manage software on Kali Linux both manually and through Python automation.
+This tutorial covers basic package management tasks in **Kali Linux** using the **APT (Advanced Package Tool)**. We will first demonstrate these tasks using **Bash commands**, followed by the same tasks using Python's `apt` module. 
 
 ### **What is APT?**
 APT is the package management system used in Debian-based Linux distributions (like Ubuntu and Kali Linux) to install, update, remove, and manage software packages.
@@ -1307,7 +1307,7 @@ subprocess.run(["sudo", "ifconfig", "eth0", "down"])
 
 ### **Kali Linux: Security**
 
-Kali Linux is designed for security testing, making it essential to understand basic security tasks such as scanning networks, checking for vulnerabilities, and analyzing security logs. In this tutorial, we'll go through some beginner-level **security tasks** in Kali Linux using **Bash commands** and then replicate the same tasks using **Python** to automate the processes.
+Kali Linux is designed for security testing, making it essential to understand basic security tasks such as scanning networks, checking for vulnerabilities, and analyzing security logs.
 
 ---
 

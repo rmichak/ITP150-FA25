@@ -974,6 +974,16 @@ import subprocess
 subprocess.run(["cut", "-d:", "-f1", "/etc/passwd"])
 ```
 
+Here’s a breakdown of each part of the command:
+
+- **`cut`**: This command is used to extract specific sections of text from each line of a file or standard input.
+
+- **`-d:`**: The `-d` option specifies the delimiter that separates fields in each line. Here, `:` is the delimiter, as fields in `/etc/passwd` are colon-separated.
+
+- **`-f1`**: The `-f` option specifies the field to extract based on the delimiter. In this case, `-f1` means "extract the first field." In `/etc/passwd`, the first field is the username.
+
+- **`/etc/passwd`**: This is the file that contains user account information on Unix-like systems. Each line represents one user and contains several fields separated by colons, including the username, user ID, group ID, home directory, and shell.
+
 ---
 
 ### **10. Listing All Groups**

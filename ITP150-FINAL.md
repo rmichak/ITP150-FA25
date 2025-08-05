@@ -1,0 +1,128 @@
+
+
+## ITP150 SUMMER 2025 Final EXAM – Library Management System (Total: 100 Points)
+
+### Objective:
+
+Design a Library Management System using object-oriented programming in Python. Your program will manage books and users, allowing the addition, removal, update, and display of records.
+
+You will implement two classes:
+
+* `Book`
+* `LibrarySystem`
+
+Each class will have specific attributes and methods to simulate a basic book lending system.
+
+---
+
+### Class: `Book` (45 points)
+
+#### **Attributes:**
+
+* `book_id` – Unique identifier for the book
+* `title` – Title of the book
+* `author` – Author's name
+* `status` – Whether the book is "available" or "checked out"
+* `borrower` – Name of borrower (if checked out)
+
+#### **Methods:**
+
+1. `__init__(self, book_id, title, author)`
+   Initialize book attributes and set status to "available".
+
+2. `checkout(self, borrower_name)`
+   Change status to "checked out" and record borrower's name.
+
+3. `return_book(self)`
+   Change status to "available" and clear borrower info.
+
+4. `update_info(self, title=None, author=None)`
+   Update the title and/or author.
+
+5. `display_info(self)`
+   Print a formatted summary of the book.
+
+---
+
+### Class: `LibrarySystem` (45 points)
+
+#### **Attributes:**
+
+* `books` – A dictionary with `book_id` as key and `Book` objects as values.
+
+#### **Methods:**
+
+1. `__init__(self)`
+   Initialize the empty `books` dictionary.
+
+2. `add_book(self, book_id, title, author)`
+   Add a new book to the system.
+
+3. `remove_book(self, book_id)`
+   Remove a book from the system.
+
+4. `update_book_info(self, book_id, title=None, author=None)`
+   Update a book’s title or author.
+
+5. `checkout_book(self, book_id, borrower_name)`
+   Check out a book to a user.
+
+6. `return_book(self, book_id)`
+   Return a book to the library.
+
+7. `display_book(self, book_id)`
+   Display a single book’s information.
+
+8. `display_all_books(self)`
+   Display info for all books in the library.
+
+---
+
+### Step-by-Step Breakdown and Points
+
+#### **Step 1: Implement the `Book` Class (45 points)**
+
+| Task                                               | Points |
+| -------------------------------------------------- | ------ |
+| Define the class and `__init__` method             | 15     |
+| Implement `checkout` and `return_book` methods     | 15     |
+| Implement `update_info` and `display_info` methods | 15     |
+
+---
+
+#### **Step 2: Implement the `LibrarySystem` Class (45 points)**
+
+| Task                                            | Points |
+| ----------------------------------------------- | ------ |
+| Define the class and initialize the dictionary  | 10     |
+| Add, remove, and update books                   | 15     |
+| Check out and return books using `Book` methods | 10     |
+| Display one book and all books                  | 10     |
+
+---
+
+#### **Step 3: Code Quality and Output (10 points)**
+
+| Task                                               | Points |
+| -------------------------------------------------- | ------ |
+| Code is clean, modular, uses OOP appropriately     | 5      |
+| Output is clearly formatted and easy to understand | 5      |
+
+---
+
+### 📝 Example Output:
+
+```
+--- Book Info ---
+ID: B001
+Title: Python for Beginners
+Author: Jane Doe
+Status: checked out
+Borrower: Alice Smith
+```
+
+---
+
+---
+
+Would you like me to generate the starter code or a template for students to begin this project?

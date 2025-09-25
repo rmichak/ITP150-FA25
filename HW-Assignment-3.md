@@ -1,19 +1,56 @@
-### HW-Assignment-3: String
+# HW-Assignment-3: Strings and Characters
 
-### Problem 1: Concatenate Name and Age
-Write a Python function `name_age` that takes a name (string) and an age (integer) as input and returns a string in the format: `"Name is X years old"`, where `Name` is the input name and `X` is the input age.
+### Problem 1: Greeting with Name and Hobby  
+Ask the user to enter their **name** and their **favorite hobby**. Then print a sentence in the format:  
+`"<Name> enjoys <Hobby>"`.
 
-**Example:**
-```python
-print(name_age("Alice", 30))  # "Alice is 30 years old"
-print(name_age("Bob", 25))  # "Bob is 25 years old"
+**Example Run:**  
+```
+What is your name? Alice
+What is your favorite hobby? painting
+Alice enjoys painting
 ```
 
-### Problem 2: Reverse Substring
-Write a Python function `reverse_substring` that takes a string and two integer indices as input and returns the substring between the two indices in reverse order.
+---
 
-**Example:**
-```python
-print(reverse_substring("hello", 1, 4))  # "lle"
-print(reverse_substring("Python", 2, 5))  # "tho"
+### Problem 2: Count Letter Occurrences  
+Ask the user to enter a word and a single letter. Then print how many times that letter appears in the word.  
+
+**Example Run:**  
+```
+Enter a word: banana
+Enter a letter: a
+The letter 'a' appears 3 times.
+```
+
+---
+
+### Problem 3: Extract Initials  
+Ask the user to enter their **first name** and **last name** separately. Then print their initials in uppercase.  
+
+**Example Run:**  
+```
+Enter your first name: john
+Enter your last name: doe
+Your initials are: JD
+```
+
+---
+
+### Problem 4: Slice Out Part of a Word  
+Ask the user to enter a word and two numbers (start and end positions). Then print the substring between those two positions.  
+
+**Example Run:**  
+```
+Enter a word: pineapple
+Enter the start index: 0
+Enter the end index: 4
+The substring is: pine
+```
+
+```
+Enter a word: watermelon
+Enter the start index: 2
+Enter the end index: 6
+The substring is: terme
 ```

@@ -57,12 +57,7 @@ Enter a number: 7
 7 x 12 = 84
 ```
 
----
 
-### 💾 **Submission Instructions**
-- Save your file as `HW_Assignment_5.py`
-- Include a comment header with your **name**, **date**, and **assignment number**
-- Submit your `.py` file via Blackboard or your GitHub Classroom link
 
 ---
 

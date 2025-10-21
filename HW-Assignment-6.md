@@ -1,7 +1,5 @@
-### HW-Assignment-6
+### Problem 4: Analyze Login Attempts
+Write a Python program that initializes a list of login attempt results such as `["success", "fail", "fail", "success", "fail"]`. Use list comprehension to create a new list containing only the failed attempts. Print the count of failed attempts and the new list.
 
-### Problem 1: Use List Comprehension
-Write a Python program that uses list comprehension to create a list of squares of the numbers from 1 to 10. Print the list of squares.
-
-### Problem 2: Create and Manipulate a Dictionary
-Write a Python program that initializes a dictionary with the following key-value pairs: `{"apple": 3, "banana": 5, "orange": 2}`. Add a new key-value pair `"grape": 4`, update the value of `"banana"` to `6`, and remove the key `"apple"`. Finally, print the dictionary.
+### Problem 5: Create and Modify a Cyber Threat Dictionary
+Write a Python program that initializes a dictionary with the following key-value pairs representing threat levels: `{"malware": 3, "phishing": 4, "ransomware": 5}`. Add a new key-value pair `"ddos": 2`, update the value of `"phishing"` to `5`, and remove the key `"malware"`. Finally, print the updated dictionary.

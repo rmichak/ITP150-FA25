@@ -1,31 +1,66 @@
-### HW-Assignment-7
+# 🧠 HW-Assignment-7: Cybersecurity Programming Basics
 
-### Functions
+## 🧩 Functions
 
-#### Problem 1: Function with Parameters
-Write a function `calculate_area` that takes two parameters, `length` and `width`, and returns the area of a rectangle. Use this function to calculate the area of a rectangle with length 10 and width 5.
+### Problem 1: Hashing a Password
+Write a function `hash_password(password)` that takes a string `password` and returns its SHA-256 hash using Python’s built-in `hashlib` module.
 
-#### Problem 2: Return Values and Scope
-Create a function `get_full_name` that takes two parameters, `first_name` and `last_name`, and returns the full name. Also, demonstrate the difference between local and global variables by defining a global variable `greeting` and using it inside the function.
-
-### Exceptions:
-
-### Problem 1: Safe Division
-Write a function `safe_divide` that takes two numbers as input and returns their division result. The function should handle the following exceptions:
-1. `ZeroDivisionError` if the second number is zero.
-2. `TypeError` if either of the inputs is not a number.
+**Hint:**  
+```python
+import hashlib
+hashlib.sha256(password.encode()).hexdigest()
+```
 
 **Test Cases:**
-1. `safe_divide(10, 2)` should return `5.0`
-2. `safe_divide(10, 0)` should return `"Error: Division by zero is not allowed."`
-3. `safe_divide(10, 'a')` should return `"Error: Both inputs must be numbers."`
+1. `hash_password("password123")` → should return a 64-character hex string.
+2. Verify that calling it twice with the same password gives the same hash.
 
-### Problem 2: Square Root Calculation
-Write a function `safe_sqrt` that takes a number as input and returns its square root. The function should handle the following exceptions:
-1. `ValueError` if the input is negative.
-2. `TypeError` if the input is not a number.
+---
+
+### Problem 2: Check for Weak Passwords
+Write a function `is_weak_password(password)` that takes a password string and checks if it’s weak.  
+A password is considered **weak** if:
+- It’s shorter than 8 characters, **OR**
+- It doesn’t contain at least one uppercase letter, one lowercase letter, one number, and one special character.
+
+Return `True` if the password is weak, otherwise `False`.
 
 **Test Cases:**
-1. `safe_sqrt(9)` should return `3.0`
-2. `safe_sqrt(-4)` should return `"Error: Cannot calculate the square root of a negative number."`
-3. `safe_sqrt('nine')` should return `"Error: Input must be a number."`
+1. `is_weak_password("Password123!")` → `False`  
+2. `is_weak_password("12345")` → `True`  
+3. `is_weak_password("weakpass")` → `True`
+
+---
+
+## ⚠️ Exceptions and Safe Programming
+
+### Problem 1: Safe File Access
+Write a function `safe_open_file(filename)` that tries to open a file in read mode and returns its contents. Handle the following exceptions:
+1. `FileNotFoundError` → return `"Error: File not found."`
+2. `PermissionError` → return `"Error: Permission denied."`
+
+**Test Cases:**
+1. `safe_open_file("secret.txt")` (if file exists) → file contents  
+2. `safe_open_file("nonexistent.txt")` → `"Error: File not found."`
+
+---
+
+### Problem 2: Validate and Parse IP Address
+Write a function `validate_ip(ip_address)` that takes a string input and checks whether it’s a valid IPv4 address.
+
+Handle these exceptions:
+1. `ValueError` if the IP cannot be split into 4 parts or parts aren’t integers.
+2. A custom error message if any part is not between 0 and 255.
+
+Return:
+- `"Valid IP address."` if valid  
+- An appropriate error message otherwise.
+
+**Test Cases:**
+1. `validate_ip("192.168.1.1")` → `"Valid IP address."`  
+2. `validate_ip("256.100.0.1")` → `"Error: Each part must be between 0 and 255."`  
+3. `validate_ip("abc.def.1.1")` → `"Error: IP must contain only numbers."`
+
+---
+
+

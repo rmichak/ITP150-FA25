@@ -1,57 +1,103 @@
-### Midterm: **Employee Data Management System**
+# 🧩 Midterm: User Login and Password Management System
 
-Your points will be counted based on this problem so please make sure you are following the steps properly to solve it. 
+You are tasked with creating a Python program that manages user login data for a small company’s internal system.  
+Your program will simulate a basic authentication management system.
 
-You are tasked with creating a Python program that manages employee records. The program should:
+---
 
-1. **Store employee information** (such as name, department, and salary) in a file using a dictionary where the key is the employee's name, and the value is another dictionary containing the employee's department and salary.
-2. **Allow the user to perform the following operations**:
-   - Add a new employee.
-   - Update an existing employee's salary.
-   - Display the details of an employee.
-   - Calculate and display the average salary of all employees.
-   - Save the updated employee data to a file.
-3. **Handle errors using try-except**, such as file reading errors or invalid inputs.
-4. **Create and import a module** for file operations (such as reading from and writing to the file).
+## **Program Requirements**
 
-### Problem Requirements:
+### 1. Store User Data
+Store **user information** (username, password, and access level) in a file using a **dictionary**, where:
+- The **key** is the username.
+- The **value** is another dictionary containing the user’s **password (hashed)** and **access level**.
 
-#### Program Structure:
+Example:
+```python
+{
+    "alice": {"password": "5f4dcc3b5aa765d61d8327deb882cf99", "access": "admin"}
+}
+```
 
-1. **File Operations**:
-   - Use file operations to store and retrieve employee data in a text file (`employees.txt`).
-   - The file should be opened and closed properly, and data should be read/written in a structured format (JSON-like format is acceptable).
+---
 
-2. **Data Structures**:
-   - **Dictionary**: Store employee data as a dictionary where each key is an employee's name, and the value is another dictionary containing the employee's department and salary.
-   - **List**: Used in parts where needed (e.g., calculating averages or managing employee data).
+### 2. User Operations
+The user should be able to perform the following operations:
+1. **Add a new user** (username, password, access level).  
+   - Passwords should be stored as **MD5 hashes** (use the `hashlib` module).  
+2. **Update a user’s password.**
+3. **Display user details (except password).**
+4. **Check login credentials** — prompt for username and password and verify if they match the stored hash.
+5. **Display the count of users by access level** (e.g., how many admins, users, etc.).
+6. **Save all updates** to a file (`users.txt`).
 
-3. **Logic**:
-   - Use **if-else-if** conditions to handle user inputs.
-   - Use **for loops** to process employee data and calculate the average salary of all employees.
+---
 
-4. **Functions**:
-   - Create functions for each task, such as adding an employee, updating salary, displaying employee details, and saving data to a file.
+### 3. Error Handling
+Use `try-except` blocks to handle:
+- File not found errors.
+- Invalid user input.
+- Lookup errors for non-existent users.
 
-5. **Try-Except**:
-   - Handle potential errors, such as missing files or invalid user inputs (e.g., entering non-numeric salaries).
+---
 
-6. **Module Creation**:
-   - Create a Python module named `file_operations.py` that contains functions for reading from and writing to the file.
+### 4. File Operations Module
+Create a separate module file named `file_operations.py` that contains:
+- `read_user_data(file_path)` – reads user data from a file and returns it as a dictionary.  
+- `write_user_data(file_path, data)` – writes updated user data to the file.
 
-### Task Breakdown:
+---
 
-1. **Module File (`file_operations.py`)**:
-   - Write two functions:
-     - `read_employee_data(file_path)`: Reads employee data from a file and returns it as a dictionary.
-     - `write_employee_data(file_path, data)`: Writes updated employee data to the file.
+### 5. File Structure
 
-2. **Main Program (`employee_manager.py`)**:
+- `file_operations.py` – handles reading/writing from the text file.
+- `user_manager.py` – contains the main program logic.
 
-### Expected Functionality:
+---
 
-- **Add an employee**: The user inputs the employee’s name, department, and salary.
-- **Update salary**: The user can update the salary for an existing employee.
-- **Display an employee's details**: The user can search for an employee by name and view their details.
-- **Calculate the average salary**: The program calculates and displays the average salary of all employees.
-- **File operations**: Data is saved to `employees.txt`, and the program reads from the file when it starts.
+### 🔐 **Hint: Using `hashlib` to Hash a Password**
+
+You can use Python’s built-in `hashlib` module to hash a password before storing it.
+
+Example:
+```python
+import hashlib
+
+# Get a password from the user
+password = input("Enter password: ")
+
+# Create an MD5 hash of the password
+hashed_password = hashlib.md5(password.encode()).hexdigest()
+
+print("Hashed password:", hashed_password)
+```
+
+👉 **Explanation:**
+- `hashlib.md5()` creates an MD5 hash object.
+- `.encode()` converts the string into bytes (required by hashlib).
+- `.hexdigest()` returns the hash as a readable string of hexadecimal characters.
+
+You can use this same pattern whenever you need to hash passwords before saving them to your dictionary or file.
+
+---
+
+## **Grading Rubric (Suggested)**
+
+| Component | Points |
+|------------|---------|
+| File operations (read/write) | 20 |
+| Dictionary data structure | 15 |
+| User operations (add, update, display, verify, count) | 25 |
+| Error handling | 15 |
+| Use of functions and modular design | 15 |
+| Hashing and cyber focus | 10 |
+| **Total** | **100** |
+
+---
+
+### **Learning Objectives**
+- File I/O and data persistence  
+- Working with nested dictionaries  
+- Exception handling  
+- Hashing (basic cybersecurity principle)  
+- Modular programming and function design  

@@ -81,7 +81,7 @@ You can use this same pattern whenever you need to hash passwords before saving 
 
 ---
 
-## **Grading Rubric (Suggested)**
+## **Grading Rubric**
 
 | Component | Points |
 |------------|---------|

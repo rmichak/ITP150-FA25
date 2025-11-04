@@ -90,7 +90,7 @@ You can use this same pattern whenever you need to hash passwords before saving 
 | User operations (add, update, display, verify, count) | 25 |
 | Error handling | 15 |
 | Use of functions and modular design | 15 |
-| Hashing and cyber focus | 10 |
+| Screenshots showing output/execution | 10 |
 | **Total** | **100** |
 
 ---
